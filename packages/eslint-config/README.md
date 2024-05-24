@@ -1,3 +1,3 @@
-# `@turbo/eslint-config`
+# `@swapr-configs/eslint-config`
 
 Collection of internal eslint configurations.
