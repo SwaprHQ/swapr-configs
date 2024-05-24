@@ -1,16 +1,13 @@
 {
   "name": "swapr-configs",
-  "private": true,
+  "license": "ISC",
+  "version": "0.0.0",
   "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "clean": "npx rimraf node_modules"
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
-    "@repo/typescript-config": "*",
-    "prettier": "^3.2.5",
+    "@swapr-configs/eslint-config": "workspace:*",
+    "@swapr-configs/typescript-config": "workspace:*",
     "turbo": "latest"
   },
   "engines": {
@@ -18,7 +15,6 @@
   },
   "packageManager": "bun@1.1.8",
   "workspaces": [
-    "apps/*",
     "packages/*"
   ]
 }
