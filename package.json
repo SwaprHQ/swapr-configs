@@ -1,7 +1,15 @@
 {
   "name": "swapr-configs",
+  "description": "Atomic monorepo to share config settings across projects",
+  "keywords": [
+    "ui",
+    "web3",
+    "config",
+    "eslint",
+    "tsconfig"
+  ],
   "license": "ISC",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "clean": "npx rimraf node_modules"
   },
