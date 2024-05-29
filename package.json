@@ -1,5 +1,6 @@
 {
   "name": "swapr-configs",
+  "version": "1.0.1",
   "description": "Atomic monorepo to share config settings across projects",
   "keywords": [
     "ui",
@@ -9,20 +10,25 @@
     "tsconfig"
   ],
   "license": "ISC",
-  "version": "1.0.1",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
-    "clean": "npx rimraf node_modules"
+    "build": "turbo run build",
+    "clean": "turbo run clean && npx rimraf node_modules && npx rimraf .turbo",
+    "publish-packages": "turbo run build && changeset version && changeset publish"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.27.5"
   },
   "devDependencies": {
     "@swapr-configs/eslint-config": "workspace:*",
     "@swapr-configs/typescript-config": "workspace:*",
+    "tsup": "^8.0.2",
     "turbo": "latest"
   },
+  "packageManager": "bun@1.1.8",
   "engines": {
     "node": ">=18"
-  },
-  "packageManager": "bun@1.1.8",
-  "workspaces": [
-    "packages/*"
-  ]
+  }
 }
