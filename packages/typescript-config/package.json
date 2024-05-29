@@ -1,6 +1,6 @@
 {
   "name": "@swapr-configs/typescript-config",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "ISC",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
