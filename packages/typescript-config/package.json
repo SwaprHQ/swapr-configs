@@ -8,5 +8,8 @@
   "scripts": {
     "build": "tsup index.ts --format cjs,esm --dts",
     "clean": "npx rimraf dist && npx rimraf .turbo"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
