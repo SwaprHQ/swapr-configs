@@ -3,11 +3,11 @@ const { resolve } = require("node:path");
 const project = resolve(process.cwd(), "tsconfig.json");
 
 /** @type {import("eslint").Linter.Config} */
-module.exports = {
+export default next = {
   extends: [
     "eslint:recommended",
     "prettier",
-    require.resolve("@vercel/style-guide/eslint/next"),
+    resolve("@vercel/style-guide/eslint/next"),
     "eslint-config-turbo",
   ],
   globals: {

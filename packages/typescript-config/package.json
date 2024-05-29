@@ -2,7 +2,11 @@
   "name": "@swapr-configs/typescript-config",
   "version": "0.0.0",
   "license": "ISC",
-  "publishConfig": {
-    "access": "public"
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup index.ts --format cjs,esm --dts",
+    "clean": "npx rimraf dist && npx rimraf .turbo"
   }
 }
